@@ -43,17 +43,17 @@ stack_t *createnod(int m)
  */
 void free1(void)
 {
-        stack_t *tmpe;
+	stack_t *tmpe;
 
-        if (head == NULL)
-                return;
+	if (head == NULL)
+		return;
 
-        while (head != NULL)
-        {
-                tmpe = head;
-                head = head->next;
-                free(tmpe);
-        }
+	while (head != NULL)
+	{
+		tmpe = head;
+		head = head->next;
+		free(tmpe);
+	}
 }
 
 
@@ -64,19 +64,19 @@ void free1(void)
  */
 void addtoqu(stack_t **newno, __attribute__((unused))unsigned int lne)
 {
-        stack_t *tmpe;
+	stack_t *tmpe;
 
-        if (newno == NULL || *newno == NULL)
-                exit(EXIT_FAILURE);
-        if (head == NULL)
-        {
-                head = *newno;
-                return;
-        }
-        tmpe = head;
-        while (tmpe->next != NULL)
-                tmpe = tmpe->next;
+	if (newno == NULL || *newno == NULL)
+		exit(EXIT_FAILURE);
+	if (head == NULL)
+	{
+		head = *newno;
+		return;
+	}
+	tmpe = head;
+	while (tmpe->next != NULL)
+		tmpe = tmpe->next;
 
-        tmpe->next = *newno;
-        (*newno)->prev = tmpe;
+	tmpe->next = *newno;
+	(*newno)->prev = tmpe;
 }
