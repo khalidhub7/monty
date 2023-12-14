@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 }
 
 /**
- * creatnod - Create node
+ * createnod - Create node
  * @m: Number inside the node.
  * Return: Upon sucess a pointer to the node. Otherwise NULL.
  */

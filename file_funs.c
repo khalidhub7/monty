@@ -42,7 +42,7 @@ void rdf(FILE *fid)
  * parseln - tokenize
  * @buf: line from file
  * @lnnum: line
- * @for:  storage format. If 0 Nodes will be entered as a stack.
+ * @forr:  storage format. If 0 Nodes will be entered as a stack.
  * if 1 nodes will be entered as a queue.
  * Return: Returns 0 if the opcode is stack. 1 if queue.
  */
@@ -119,7 +119,7 @@ void find1(char *opc, char *valu, int lne, int forr)
 
 /**
  * callf - Call required function
- * @fuc: Ptr to the function that is about to be called.
+ * @func: Ptr to the function that is about to be called.
  * @p: string representing the opcode.
  * @vale: string represent a numeric value.
  * @lne: line numeber for the instruction.
