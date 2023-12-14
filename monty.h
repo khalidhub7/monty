@@ -40,4 +40,7 @@ typedef struct instruction_s
 
 void push_task1(stack_t **, unsigned int);
 
+extern stack_t *head;
+typedef void (*op_func)(stack_t **, unsigned int);
+
 #endif
