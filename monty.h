@@ -1,6 +1,7 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
@@ -38,9 +39,45 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void push_task1(stack_t **, unsigned int);
-
 extern stack_t *head;
 typedef void (*op_func)(stack_t **, unsigned int);
+
+
+void open1(char *filena);
+int parseln(char *buf, int lnnum, int forr);
+void rdf(FILE *);
+int len_chars(FILE *);
+void find1(char *, char *, int, int);
+
+stack_t *createnod(int m);
+void free1(void);
+void printst(stack_t **, unsigned int);
+void addtost(stack_t **, unsigned int);
+void addtoqu(stack_t **, unsigned int);
+
+void callf(op_func, char *, char *, int, int);
+void printtop(stack_t **, unsigned int);
+void poptop(stack_t **, unsigned int);
+void nop(stack_t **, unsigned int);
+void swapn(stack_t **, unsigned int);
+
+
+void addn(stack_t **, unsigned int);
+void subn(stack_t **, unsigned int);
+
+void divn(stack_t **, unsigned int);
+void muln(stack_t **, unsigned int);
+void modn(stack_t **, unsigned int);
+
+
+void pchar(stack_t **, unsigned int);
+void pstr(stack_t **, unsigned int);
+void root(stack_t **, unsigned int);
+
+
+void error1(int error_code, ...);
+void error2(int error_code, ...);
+void error3(int error_code, ...);
+void root2(stack_t **, unsigned int);
 
 #endif
